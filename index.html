@@ -318,49 +318,34 @@
 
     /* ── CONTACTO ── */
     #contacto { background: var(--fondo-claro); }
-    .contacto-grid {
-      display: grid; grid-template-columns: 1fr 1.3fr;
-      gap: 3rem; align-items: start; margin-top: 2.5rem;
+    .contacto-cards {
+      display: flex; gap: 2rem; justify-content: center;
+      flex-wrap: wrap; margin-top: 2.5rem;
     }
-    .contacto-info h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem; color: var(--azul); margin-bottom: .8rem;
+    .contacto-card {
+      background: var(--blanco); border-radius: 16px;
+      padding: 2.5rem 3rem; text-align: center;
+      box-shadow: 0 2px 16px rgba(0,0,0,.07);
+      display: flex; flex-direction: column; align-items: center; gap: .8rem;
+      min-width: 280px;
     }
-    .contacto-info p { color: var(--texto-suave); line-height: 1.7; margin-bottom: 1.5rem; }
-    .info-item {
-      display: flex; align-items: flex-start; gap: .8rem; margin-bottom: 1rem;
+    .contacto-card--email {
+      border-top: 4px solid var(--naranja);
     }
-    .info-icon {
-      width: 36px; height: 36px; background: var(--azul-nav);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      color: var(--blanco); font-size: .9rem; flex-shrink: 0; margin-top: .1rem;
+    .contacto-card__icon {
+      font-size: 3rem; line-height: 1;
     }
-    .info-label { font-size: .8rem; color: var(--texto-suave); margin-bottom: .15rem; }
-    .info-value { font-size: .92rem; color: var(--azul); font-weight: 500; }
-    .contacto-form {
-      background: var(--blanco); border-radius: 12px;
-      padding: 2rem; box-shadow: 0 2px 14px rgba(0,0,0,.07);
+    .contacto-card__label {
+      font-size: .8rem; text-transform: uppercase; letter-spacing: .08em;
+      color: var(--texto-suave); font-weight: 600;
     }
-    .form-group { margin-bottom: 1.2rem; }
-    .form-group label { display: block; font-size: .84rem; color: var(--azul); font-weight: 600; margin-bottom: .4rem; }
-    .form-group input, .form-group textarea {
-      width: 100%; border: 1.5px solid #d4dce8;
-      border-radius: 8px; padding: .7rem .9rem;
-      font-family: inherit; font-size: .9rem; color: var(--texto);
-      background: var(--blanco); transition: border-color .2s;
-      outline: none;
+    .contacto-card__value {
+      font-size: 1.25rem; font-weight: 700; color: var(--azul);
+      text-decoration: none; word-break: break-all;
+      transition: color .2s;
     }
-    .form-group input:focus, .form-group textarea:focus { border-color: var(--azul); }
-    .form-group input::placeholder, .form-group textarea::placeholder { color: #aab; }
-    .form-group textarea { resize: vertical; min-height: 110px; }
-    .btn-enviar {
-      width: 100%; background: var(--azul); color: var(--blanco);
-      border: none; padding: .85rem 1rem; border-radius: 8px;
-      font-size: .95rem; font-weight: 600; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; gap: .5rem;
-      transition: background .2s;
-    }
-    .btn-enviar:hover { background: var(--azul-oscuro); }
+    .contacto-card__value:hover { color: var(--naranja); }
+    .contacto-card__value--small { font-size: .95rem; font-weight: 500; line-height: 1.6; }
 
     /* ── FOOTER ── */
     footer {
@@ -398,7 +383,6 @@
       .nav-links a { font-size: .82rem; }
       .ejes-grid { grid-template-columns: 1fr; }
       .requisitos-grid { grid-template-columns: 1fr; }
-      .contacto-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
       .footer-bottom { flex-direction: column; text-align: center; }
     }
@@ -639,39 +623,18 @@
   <!-- CONTACTO -->
   <section id="contacto">
     <div class="container">
-      <div class="contacto-grid">
-        <div class="contacto-info">
-          <h2>Contacto</h2>
-          <p>¿Tiene alguna duda o consulta sobre el 8° Foro RIED? Complete el formulario o escríbanos directamente a nuestro correo electrónico.</p>
-          <div class="info-item">
-            <div class="info-icon">✉</div>
-            <div>
-              <div class="info-label">Correo Electrónico</div>
-              <div class="info-value">8fororied@unq.edu.ar</div>
-            </div>
-          </div>
-          <div class="info-item">
-            <div class="info-icon">📍</div>
-            <div>
-              <div class="info-label">Sedes del Evento</div>
-              <div class="info-value">Universidad Nacional de Quilmes (UNQ)<br>Universidad de Buenos Aires (FCE-UBA)</div>
-            </div>
-          </div>
+      <h2 class="section-title">Contacto</h2>
+      <p class="section-text">¿Tiene alguna duda o consulta sobre el 8° Foro RIED? Escríbanos directamente.</p>
+      <div class="contacto-cards">
+        <div class="contacto-card contacto-card--email">
+          <div class="contacto-card__icon">✉</div>
+          <div class="contacto-card__label">Correo electrónico</div>
+          <a href="mailto:8fororied@unq.edu.ar" class="contacto-card__value">8fororied@unq.edu.ar</a>
         </div>
-        <div class="contacto-form">
-          <div class="form-group">
-            <label>Nombre completo</label>
-            <input type="text" placeholder="Ej. María González" />
-          </div>
-          <div class="form-group">
-            <label>Correo electrónico</label>
-            <input type="email" placeholder="maria@ejemplo.com" />
-          </div>
-          <div class="form-group">
-            <label>Mensaje</label>
-            <textarea placeholder="Escriba su consulta aquí..."></textarea>
-          </div>
-          <button class="btn-enviar">Enviar mensaje ✈</button>
+        <div class="contacto-card">
+          <div class="contacto-card__icon">📍</div>
+          <div class="contacto-card__label">Sedes del Evento</div>
+          <div class="contacto-card__value contacto-card__value--small">Universidad Nacional de Quilmes (UNQ)<br>Universidad de Buenos Aires (FCE-UBA)</div>
         </div>
       </div>
     </div>
