@@ -316,6 +316,52 @@
       line-height: 1.5;
     }
 
+    /* ── COMITÉS ── */
+    #comites { background: var(--fondo-claro); }
+    .comites-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 2.5rem;
+    }
+    .comite-bloque {
+      background: var(--blanco);
+      border-radius: 16px;
+      padding: 2rem 2.2rem;
+      box-shadow: 0 2px 16px rgba(0,0,0,.07);
+    }
+    .comite-bloque h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--azul-oscuro);
+      margin-bottom: 1.4rem;
+      padding-bottom: .7rem;
+      border-bottom: 2px solid var(--naranja);
+    }
+    .comite-lista {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .7rem;
+    }
+    .comite-lista li {
+      display: flex;
+      flex-direction: column;
+      font-size: .9rem;
+      line-height: 1.4;
+    }
+    .comite-nombre {
+      font-weight: 600;
+      color: var(--texto);
+    }
+    .comite-inst {
+      font-size: .8rem;
+      color: var(--texto-suave);
+    }
+    @media (max-width: 900px) {
+      .comites-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── CONTACTO ── */
     #contacto { background: var(--fondo-claro); }
     .contacto-cards {
@@ -402,6 +448,7 @@
       <li><a href="#convocatoria">Convocatoria</a></li>
       <li><a href="#programa">Programa</a></li>
       <li><a href="#inscripcion">Inscripción</a></li>
+      <li><a href="#comites">Comités</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
@@ -617,6 +664,60 @@
       <p class="tabla-nota">Los valores expresados no incluyen costos de transferencias bancarias internacionales. Los datos para el pago se informarán en junio junto con la carta de aceptación de la ponencia.<br><br>
       Las y los participantes de Argentina podrán pagar en pesos argentinos. El importe por abonar será el equivalente al monto que corresponda a la categoría de participante y período de pago, según la cotización oficial del Banco de la Nación Argentina el día en que se efectivice el pago.<br><br>
       Una vez efectuado el pago, deberá enviar el comprobante a la coordinación del Foro al siguiente correo electrónico: <a href="mailto:8fororied@unq.edu.ar" style="color:var(--azul);">8fororied@unq.edu.ar</a> mencionando si requiere o no de factura, junto con los datos para confeccionarla.</p>
+    </div>
+  </section>
+
+  <!-- COMITÉS -->
+  <section id="comites">
+    <div class="container">
+      <h2 class="section-title">Comités</h2>
+      <div class="comites-grid">
+
+        <!-- Comité Organizador -->
+        <div class="comite-bloque">
+          <h3>Comité Organizador</h3>
+          <ul class="comite-lista">
+            <li><span class="comite-nombre">Patricia Gutti</span><span class="comite-inst">Universidad Nacional de Quilmes, Argentina</span></li>
+            <li><span class="comite-nombre">Sebastián Smerling</span><span class="comite-inst">Universidad Nacional de San Martín, Argentina</span></li>
+            <li><span class="comite-nombre">Karina García</span><span class="comite-inst">Universidad Nacional de Quilmes, Argentina</span></li>
+            <li><span class="comite-nombre">Luis Gutiérrez</span><span class="comite-inst">Universidad Autónoma de Ciudad Juárez, México</span></li>
+            <li><span class="comite-nombre">Ignacio Rodriguez</span><span class="comite-inst">Universidad de La Frontera, Chile</span></li>
+            <li><span class="comite-nombre">Myrna Limas</span><span class="comite-inst">Universidad Autónoma de Ciudad Juárez, México</span></li>
+            <li><span class="comite-nombre">Adrián Rodríguez</span><span class="comite-inst">Universidad de la República, Uruguay</span></li>
+            <li><span class="comite-nombre">Florencia Pizzarulli</span><span class="comite-inst">Universidad Nacional de Quilmes, Argentina</span></li>
+            <li><span class="comite-nombre">Rafael Trueba</span><span class="comite-inst">Universidad Michoacana de San Nicolás de Hidalgo, México</span></li>
+            <li><span class="comite-nombre">Ángeles Traina</span><span class="comite-inst">Universidad Nacional de Quilmes, Argentina</span></li>
+            <li><span class="comite-nombre">Matías Van Kemenade</span><span class="comite-inst">Universidad Nacional de Quilmes, Argentina</span></li>
+          </ul>
+        </div>
+
+        <!-- Comité Científico -->
+        <div class="comite-bloque">
+          <h3>Comité Científico</h3>
+          <ul class="comite-lista">
+            <li><span class="comite-nombre">Verónica Robert</span><span class="comite-inst">Universidad Nacional de San Martín, Argentina</span></li>
+            <li><span class="comite-nombre">Fernando Peirano</span><span class="comite-inst">Universidad Nacional de Quilmes, Argentina</span></li>
+            <li><span class="comite-nombre">Paulina Sanhueza</span><span class="comite-inst">Universidad de La Frontera, Chile</span></li>
+            <li><span class="comite-nombre">Jeremías Lachman</span><span class="comite-inst">Facultad de Ciencias Económicas, UBA, Argentina</span></li>
+            <li><span class="comite-nombre">Gabriela Starobinsky</span><span class="comite-inst">Universidad Nacional de Chilecito, Argentina</span></li>
+            <li><span class="comite-nombre">Daniel Cravacuore</span><span class="comite-inst">Universidad Nacional de Quilmes, Argentina</span></li>
+            <li><span class="comite-nombre">Myrna Limas</span><span class="comite-inst">Universidad Autónoma de Ciudad Juárez, México</span></li>
+            <li><span class="comite-nombre">Ignacio Rodriguez</span><span class="comite-inst">Universidad de La Frontera, Chile</span></li>
+            <li><span class="comite-nombre">Patricia Gutti</span><span class="comite-inst">Universidad Nacional de Quilmes, Argentina</span></li>
+            <li><span class="comite-nombre">Luis Gutiérrez</span><span class="comite-inst">Universidad Autónoma de Ciudad Juárez, México</span></li>
+            <li><span class="comite-nombre">Adrián Rodríguez</span><span class="comite-inst">Universidad de la República, Uruguay</span></li>
+            <li><span class="comite-nombre">Sofía Boza</span><span class="comite-inst">Universidad de Chile, Chile</span></li>
+            <li><span class="comite-nombre">Héctor Bazque</span><span class="comite-inst">Universidad Nacional de Quilmes, Argentina</span></li>
+            <li><span class="comite-nombre">Ángeles Sánchez</span><span class="comite-inst">Universidad Autónoma de Madrid, España</span></li>
+            <li><span class="comite-nombre">Rafael Trueba</span><span class="comite-inst">Universidad Michoacana de San Nicolás de Hidalgo, México</span></li>
+            <li><span class="comite-nombre">Manuel Gonzalo</span><span class="comite-inst">Universidad Nacional de Quilmes, Argentina</span></li>
+            <li><span class="comite-nombre">Olga Biosca</span><span class="comite-inst">Glasgow Caledonian University, Reino Unido</span></li>
+            <li><span class="comite-nombre">Ramiro Bertoni</span><span class="comite-inst">Universidad Nacional de San Martín y UNQ, Argentina</span></li>
+            <li><span class="comite-nombre">Pablo Galaso</span><span class="comite-inst">Universidad Pontificia Comillas, España</span></li>
+          </ul>
+        </div>
+
+      </div>
     </div>
   </section>
 
