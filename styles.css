@@ -100,6 +100,13 @@
       text-transform: uppercase; opacity: .95;
     }
     .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .hero-doc-link {
+      display: inline-block; margin-top: 1.4rem;
+      color: rgba(255,255,255,.85); font-size: .85rem;
+      text-decoration: underline; text-underline-offset: 3px;
+      transition: color .2s;
+    }
+    .hero-doc-link:hover { color: var(--blanco); }
     .btn-primary {
       background: var(--naranja); color: var(--blanco);
       border: none; padding: .8rem 1.8rem; border-radius: 999px;
