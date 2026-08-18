@@ -101,12 +101,15 @@
     }
     .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
     .hero-doc-link {
-      display: inline-block; margin-top: 1.4rem;
-      color: rgba(255,255,255,.85); font-size: .85rem;
-      text-decoration: underline; text-underline-offset: 3px;
-      transition: color .2s;
+      display: inline-flex; align-items: center; gap: .45rem;
+      margin-top: 1.4rem; padding: .55rem 1.1rem;
+      background: rgba(0,0,0,.4); border: 1px solid rgba(255,255,255,.35);
+      border-radius: 999px;
+      color: var(--blanco); font-size: .82rem; font-weight: 500;
+      text-decoration: none;
+      transition: background .2s, border-color .2s;
     }
-    .hero-doc-link:hover { color: var(--blanco); }
+    .hero-doc-link:hover { background: rgba(0,0,0,.6); border-color: rgba(255,255,255,.6); }
     .btn-primary {
       background: var(--naranja); color: var(--blanco);
       border: none; padding: .8rem 1.8rem; border-radius: 999px;
