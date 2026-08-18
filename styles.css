@@ -187,6 +187,15 @@
       background: var(--blanco); border-radius: 12px;
       padding: 2rem 1.8rem;
       box-shadow: 0 2px 12px rgba(0,0,0,.06);
+      overflow: hidden;
+    }
+    .eje-card-media {
+      margin: -2rem -1.8rem 1.2rem;
+      aspect-ratio: 16 / 10;
+      background: var(--fondo-gris);
+    }
+    .eje-card-media img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
     }
     .eje-icono {
       width: 44px; height: 44px; background: #eef5fb;
